@@ -1,0 +1,127 @@
+MDScreen:
+    name: 'homepage'
+    MDFloatLayout:
+        md_bg_color: 246/255, 250/255, 1, 1
+        MDLabel:
+            text: 'Hello,'
+            font_name: 'fonts/Poppins-Medium'
+            pos_hint: {'center_x': .56, 'center_y': .93}
+            font_size: '15sp'
+            color: 188/255, 202/255, 208/255, 1
+        MDLabel:
+            text: 'Forger!'
+            font_name: 'fonts/Poppins-Medium'
+            pos_hint: {'center_x': .56, 'center_y': .89}
+            font_size: '20sp'
+            color: 71/255, 92/255, 119/255, 1
+        ProfileButton:
+            source: "assets/profile-pic-small.png"
+            pos_hint: {'center_x': .83, 'center_y': .91}
+            background_color: 1, 1, 1, 0
+            size_hint: None, None
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'profile'
+
+        SearchBar:
+            size_hint: .85, .09
+            pos_hint: {'center_x': .5, 'center_y': .75}
+            elevation: 10
+            md_bg_color: 1, 1, 1, 1
+            radius: [15]
+            Image:
+                source: "assets/search.png"
+                pos_hint: {'center_x': .1, 'center_y': .48}
+                size_hint_y: .5
+            TextInput:
+                hint_text: 'Search anything'
+                size_hint: .78, None
+                pos_hint: {'center_x': .58, 'center_y': .5}
+                height: self.minimum_height
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                multiline: False
+                background_color: 0, 0, 0, 0
+                padding: 15
+                font_name: "fonts/Poppins-Medium"
+                font_size: '14sp'
+                hint_text_color: 195/255, 208/255, 231/255, 1
+
+        ScrollView:
+            do_scroll_y: False
+            do_scroll_x: True
+            size_hint_y: .14
+            pos_hint: {'center_y': .58}
+            bar_width: 0
+            GridLayout:
+                size_hint_x: None
+                height: self.minimum_height
+                width: self.minimum_width
+                rows: 1
+                spacing: 10
+                padding: 20, 0
+                Image:
+                    source: 'assets/plus.png'
+                    size_hint: None, None
+                    size: '65dp', '65dp'
+                Image:
+                    source: 'assets/s1.png'
+                    size_hint: None, None
+                    size: '65dp', '65dp'
+                Image:
+                    source: 'assets/s2.png'
+                    size_hint: None, None
+                    size: '65dp', '65dp'
+                Image:
+                    source: 'assets/s3.png'
+                    size_hint: None, None
+                    size: '65dp', '65dp'
+                Image:
+                    source: 'assets/s1.png'
+                    size_hint: None, None
+                    size: '65dp', '65dp'
+                Image:
+                    source: 'assets/s3.png'
+                    size_hint: None, None
+                    size: '65dp', '65dp'
+
+        MDFloatLayout:
+            size_hint: .75, .36
+            pos_hint: {'center_x': .5, 'center_y': .32}
+            canvas.before:
+                Color:
+                    rgb: 1, 1, 1, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [16, 16, 0, 0]
+                    source: 'assets/forger-family.png'
+        ProfileCard:
+            size_hint: .75, .08
+            pos_hint: {'center_x': .5, 'center_y': .09}
+            elevation: 10
+            md_bg_color: 249/255, 250/255, 253/255, 1
+            radius: [0, 0, 16, 16]
+            Image:
+                source: 'assets/s1.png'
+                size_hint: .75, .75
+                pos_hint: {'center_x': .14, 'center_y': .5}
+            MDLabel:
+                text: "Anya Forger"
+                font_size: '12sp'
+                font_name: 'fonts/Poppins-Medium'
+                pos_hint: {'center_x': .78, 'center_y': .6}
+                color: 71/255, 92/255, 119/255, 1
+            MDLabel:
+                text: "18m ago"
+                font_size: '12sp'
+                font_name: 'fonts/Poppins-Medium'
+                pos_hint: {'center_x': .78, 'center_y': .35}
+                color: 188/255, 202/255, 228/255, 1
+            MDIconButton:
+                icon: "dots-vertical"
+                pos_hint: {'center_x': .93, 'center_y': 0.5}
+                user_font_size: "20sp"
+                theme_text_color: "Custom"
+                text_color: 71/255, 92/255, 119/255, 1
+

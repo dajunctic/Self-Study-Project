@@ -1,0 +1,146 @@
+MDScreen:
+    name: 'conversation'
+    MDFloatLayout:
+        md_bg_color: 246/255, 250/255, 1, 1
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {'center_y': 0.95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: 71/255, 92/255, 119/255, 1
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'profile'
+        MDIconButton:
+            icon: "dots-vertical"
+            pos_hint: {'center_x': .93, 'center_y': 0.95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: 71/255, 92/255, 119/255, 1
+
+        MDLabel:
+            text: "Chat with friends"
+            font_name: "fonts/Poppins-Bold"
+            font_size: "20sp"
+            pos_hint: {"center_x": .56, "center_y": .89}
+            color: rgba(71, 92, 119, 255)
+        SearchBar:
+            size_hint: .85, .09
+            pos_hint: {'center_x': .5, 'center_y': .78}
+            elevation: 10
+            md_bg_color: 1, 1, 1, 1
+            radius: [15]
+            Image:
+                source: "assets/search.png"
+                pos_hint: {'center_x': .1, 'center_y': .48}
+                size_hint_y: .5
+            TextInput:
+                hint_text: 'Search friend'
+                size_hint: .78, None
+                pos_hint: {'center_x': .58, 'center_y': .5}
+                height: self.minimum_height
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                multiline: False
+                background_color: 0, 0, 0, 0
+                padding: 15
+                font_name: "fonts/Poppins-Medium"
+                font_size: '14sp'
+                hint_text_color: 195/255, 208/255, 231/255, 1
+        ScrollView:
+            do_scroll_y: True
+            do_scroll_x: False
+            size_hint_y: .72
+            pos_hint: {'center_x': .52, 'y': 0}
+            bar_width: 0
+            GridLayout:
+                size_hint_y: None
+                row_default_height: 60
+                height: self.minimum_height
+                cols: 1
+                spacing: 15, 10
+                padding: 15, 10
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s1.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Anya Forger"
+                        font_size: '14sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 71/255, 92/255, 119/255, 1
+                    MDLabel:
+                        text: "I know you love me very much"
+                        font_size: '13sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 188/255, 202/255, 228/255, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s2.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Anya Forger"
+                        font_size: '14sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 71/255, 92/255, 119/255, 1
+                    MDLabel:
+                        text: "I know you love me very much"
+                        font_size: '13sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 188/255, 202/255, 228/255, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s3.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Anya Forger"
+                        font_size: '14sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 71/255, 92/255, 119/255, 1
+                    MDLabel:
+                        text: "I know you love me very much"
+                        font_size: '13sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 188/255, 202/255, 228/255, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s2.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Anya Forger"
+                        font_size: '14sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 71/255, 92/255, 119/255, 1
+                    MDLabel:
+                        text: "I know you love me very much"
+                        font_size: '13sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 188/255, 202/255, 228/255, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s1.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Anya Forger"
+                        font_size: '14sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 71/255, 92/255, 119/255, 1
+                    MDLabel:
+                        text: "I know you love me very much"
+                        font_size: '13sp'
+                        font_name: 'fonts/Poppins-Medium'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 188/255, 202/255, 228/255, 1
+        Image:
+            source: 'assets/s1.png'
+            size_hint: .16, .16
+            pos_hint: {'center_x': .85, 'center_y': .08}

@@ -1,0 +1,136 @@
+MDScreen:
+    name: 'profile'
+    MDFloatLayout:
+        md_bg_color: 0/255, 51/255, 102/255, 1
+        ProfileCard:
+            size_hint_y: .65
+            pos_hint: {'center_y': .7}
+            elevation: 6
+            md_bg_color: 3/255, 28/255, 47/255, 1
+            radius: [0, 0, 20, 20]
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint: {'center_y': 0.91}
+                user_font_size: "20sp"
+                theme_text_color: "Custom"
+                text_color: 1/255, 255/255, 255/255, 1
+                on_release:
+                    root.manager.transition.direction = 'right'
+                    root.manager.current = 'homepage'
+            MDIconButton:
+                icon: "chat"
+                pos_hint: {'center_x': .93, 'center_y': 0.9}
+                user_font_size: "30sp"
+                theme_text_color: "Custom"
+                text_color: 1/255, 255/255, 255/255, 1
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'conversation'
+            MDLabel:
+                text: "My Profile"
+                font_name: "fonts/Poppins-Bold"
+                font_size: "20sp"
+                pos_hint: {"center_x": .56, "center_y": .82}
+                color: 196/255, 25/255, 138/255, 1
+            MDFloatLayout:
+                size_hint_y: .2
+                pos_hint: {'center_y': .62}
+                Image:
+                    source: "assets/profile-pic.png"
+                    pos_hint: {'center_x': .5, "center_y": .5}
+            MDLabel:
+                text: "Dajunctic Vu"
+                font_name: "fonts/Poppins-Bold"
+                pos_hint: {"center_y": .44}
+                halign: 'center'
+                color: 1/255, 255/255, 255/255, 1
+
+            MDLabel:
+                text: "VNU University of Engineering and Technology"
+                font_name: "fonts/Poppins-Medium"
+                pos_hint: {"center_y": .36}
+                halign: 'center'
+                font_size: "12sp"
+                color: 91/255, 132/255, 177/255, 1
+            MDLabel:
+                text: "Hanoi, Viet Nam"
+                font_name: "fonts/Poppins-Medium"
+                pos_hint: {"center_y": .32}
+                halign: 'center'
+                font_size: "12sp"
+                color: 91/255, 132/255, 177/255, 1
+            MDGridLayout:
+                rows: 2
+                cols: 3
+                size_hint: .85, .12
+                pos_hint: {'center_x': .5, 'center_y': .15}
+                MDLabel:
+                    text: "Photos"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Medium"
+                    font_size: "12sp"
+                    color: 196/255, 25/255, 138/255, 1
+                MDLabel:
+                    text: "Followers"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Medium"
+                    font_size: "12sp"
+                    color: 196/255, 25/255, 138/255, 1
+                MDLabel:
+                    text: "Follows"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Medium"
+                    font_size: "12sp"
+                    color: 196/255, 25/255, 138/255, 1
+
+                MDLabel:
+                    text: "89"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Bold"
+                    font_size: "14sp"
+                    color: 1/255, 255/255, 255/255, 1
+                MDLabel:
+                    text: "152M"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Bold"
+                    font_size: "14sp"
+                    color: 1/255, 255/255, 255/255, 1
+                MDLabel:
+                    text: "0"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Bold"
+                    font_size: "14sp"
+                    color: 1/255, 255/255, 255/255, 1
+
+#        FloatLayout:
+#            size_hint: .90, .31
+#            pos_hint: {'center_x': .5, 'center_y': .19}
+#            canvas.before:
+#                Color:
+#                    rgba: 91/255, 132/255, 177/255, 1
+#                RoundedRectangle:
+#                    size: self.size
+#                    pos: self.pos
+#                    radius: [10]
+
+        MDSmartTile:
+            box_color: 1, 1, 1, 0
+            radius: [5, 5, 5, 5]
+            source: 'assets/1.png'
+            pos_hint: {'center_x': .29, 'center_y': .185}
+            size_hint: .34, .25
+
+        MDSmartTile:
+            box_color: 1, 1, 1, 0
+            radius: [5, 5, 5, 5]
+            source: 'assets/2.png'
+            pos_hint: {'center_x': .68, 'center_y': .25}
+            size_hint: .4, .12
+
+        MDSmartTile:
+            box_color: 1, 1, 1, 0
+            radius: [5, 5, 5, 5]
+            source: 'assets/3.png'
+            pos_hint: {'center_x': .68, 'center_y': .12}
+            size_hint: .4, .12
+

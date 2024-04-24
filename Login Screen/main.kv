@@ -1,0 +1,60 @@
+MDScreen:
+    name: 'main'
+    MDFloatLayout:
+        md_bg_color: 3/255, 28/255, 47/255, 1
+        Image:
+            source: "assets/logo.png"
+            size_hint: .8, .8
+            pos_hint: {'center_x': .5, 'center_y': .75}
+        MDLabel:
+            text: 'Hello Dazu users!'
+            font_name: "fonts/Poppins-Bold"
+            font_size: "23sp"
+            pos_hint: {'center_y': .51}
+            halign: 'center'
+            color: 196/255, 25/255, 138/255, 1
+        MDFloatLayout:
+            size_hint: .8, .2
+            pos_hint: {'center_x': .5, 'center_y': .44}
+            MDLabel:
+                text: 'Best place to write and share your life stories and your journey experiences'
+                font_name: "fonts/Poppins-Light"
+                font_size: "16sp"
+                pos_hint: {'center_x': .5, 'center_y': .47}
+                halign: 'center'
+                color: 17/255, 129/255, 196/255, 1
+        Button:
+            text: 'LOGIN'
+            color: 3/255, 28/255, 47/255, 1
+            size_hint: .66, .065
+            pos_hint: {'center_x': .5, 'center_y': .25}
+            background_color: 0, 0, 0, 0
+            font_name: 'fonts/Poppins-Bold'
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'login'
+            canvas.before:
+                Color:
+                    rgba: 196/255, 25/255, 138/255, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [5]
+        Button:
+            text: 'SIGNUP'
+            color: 196/255, 25/255, 138/255, 1
+            size_hint: .66, .065
+            pos_hint: {'center_x': .5, 'center_y': .15}
+            background_color: 0, 0, 0, 0
+            font_name: 'fonts/Poppins-Bold'
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'signup'
+            canvas.before:
+                Color:
+                    rgba: 196/255, 25/255, 138/255, 1
+                Line:
+                    width: 1.2
+                    rounded_rectangle: self.x, self.y, self.width, self.height, 5, 5, 5, 5
+
+

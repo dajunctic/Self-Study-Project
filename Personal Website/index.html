@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type="image/gif/png" href="Akali.jpg">
+		<title> Professor Dajunctic</title>
+		<meta charset="utf-8">
+		<style>
+			ul {
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				overflow: hidden;
+				background-color:#4CAF50;
+				font-family:Gabriola;
+				text-align:center;
+			}
+			li {
+				float:left;
+			}
+			li a {
+				display:block;
+				color:white;
+				text-align:center;
+				padding:16px;
+				text-decoration: none;
+				font-size:175%;
+				height:40px;
+			}
+			li a:hover {
+				background-color:#46a049;
+			}
+			.container {
+  				position: relative;
+  				text-align: center;
+  				color: white;
+			}
+			.top-left {
+				color:orange;
+  				position: absolute;
+  				top: 8px;
+  				left: 16px;
+				font-size:200%;
+			}
+			.top-right {
+				display : none;
+				position: absolute;
+				top: 8px;
+				right: 30px;
+				font-size: 30px;
+				color : pink;
+			}
+			.button {
+				font-size: 25px;
+				text-align:center;
+				cursor: pointer;
+				outline: none;
+				color: #fff;
+				background-color: #4CAF50;
+				border:none;
+				border-radius:100px;
+				box-shadow: 0 9px #999;
+			}
+			.button:hover {
+				background-color: #3e8e41
+			}
+			.button:active {
+  				background-color: #3e8e41;
+  				box-shadow: 0 5px #666;
+  				transform: translateY(4px);
+			}
+		</style>
+		<script>
+			var numClicks = 0;
+			function countClicks (){
+					numClicks = (numClicks + 1) % 6;
+					document.getElementById("demo").innerHTML = numClicks;
+			}
+		</script>
+	</head>
+	<body>
+		<div> <img src="Dajunctic_BrandName.jpg" alt="Dajunctic" style="width:100%"> </div>
+		<ul>
+			<li> <a href="index.html" style="background-color:#46a049"> Home</a> </li>
+			<li> <a href="profile.html"> <b> Profile </b></a> </li>
+			<li> <a href="introduce.html"> <b>Introduce</b></a> <li>
+			<li> <a href="news.html"> <b>News</b></a> <li>
+			<li> <a href="idea.html"> <b>Idea</b></a> <li>
+			<li> <a href="achievement.html"> <b>Achievement</b></a> <li>
+			<li> <a href="hobbies.html"><b> Hobbies</b></a> <li>
+			<li> <a href="myGame.html"> <b>Game</b></a> <li>
+		</ul>
+		<div class="container">
+			<img src="Rem-chan.png" alt="Rem" style="width:100%"> 
+			<a href="index.html"> <div class="top-left">Welcome to my own website! </div> </a>
+			<div class="top-right"> Hi! </div>
+			<div class="top-right"> Nice to meet you! </div>
+			<div class="top-right"> What can I help you? </div>
+			<div class="top-right"> You don't need,do you?</div>
+			<div class="top-right"> Ok, well! Good bye! Ahihi! </div>
+			<div class="top-right"> </div>
+			<button class="button" style="position: absolute;top:50px;left:19px;width:120px;height:50px" onclick="talkingRem();countClicks()"> Click Me </button>
+			<script>
+				function talkingRem(){
+					var speech, i;
+					speech = document.getElementsByClassName("top-right");
+					for(i = 0;i < speech.length; i++) {
+						speech[i].style.display = "none";
+					}
+					speech[numClicks].style.display = "block";
+				}
+			</script>
+		</div>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/0Vwwr3VGsYg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<a href="Example.html"> <span style="font-size:150%">View my example website<span> </a>
+		<h2 style="text-align:center;color:red;font-family:Vivaldi"> Created by Vu Quy Dat </h2>
+	</body>
+</html>

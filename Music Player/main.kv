@@ -1,0 +1,111 @@
+#: import ew kivy.uix.effectwidget
+MDFloatLayout:
+    EffectWidget:
+        effects: [ew.VerticalBlurEffect(size=3), ew.HorizontalBlurEffect(size=3)]
+        FitImage:
+            source: 'assets/theme.png'
+
+    SongCover:
+        play_button: play_button
+        progress: progress
+        id: sc
+        size_hint: None, None
+        size: 0.7 * root.width, 0.7 * root.width
+        pos_hint: {'center_x': .5, 'center_y': .7}
+        background_color: 1, 1, 1, 1
+        RotateImage:
+            angle: sc.angle
+            source: 'assets/phone_theme.png'
+            radius: [250]
+
+    MDLabel:
+        text: sc.name
+        font_size: '22sp'
+        font_name: 'BPoppins'
+        pos_hint: {'center_y': .46}
+        halign: 'center'
+        color: rgba(1, 255, 255, 255)
+    MDLabel:
+        text: sc.artist
+        font_size: '20sp'
+        font_name: 'MPoppins'
+        pos_hint: {'center_y': .4}
+        halign: 'center'
+        color: 196/255, 25/255, 138/255, 1
+
+    MDBoxLayout:
+        size_hint: .9, .1
+        pos_hint: {'center_x': .5, 'center_y': .22}
+        MDLabel:
+            text: sc.current_length
+            font_size: '18sp'
+            font_name: 'MPoppins'
+            pos_hint: {'center_y': .5}
+            halign: 'left'
+            color: 1/255, 255/255, 255/255, 1
+        MDLabel:
+            text: sc.length
+            font_size: '18sp'
+            font_name: 'MPoppins'
+            pos_hint: {'center_y': .5}
+            halign: 'right'
+            color: 196/255, 25/255, 138/255, 1
+
+#    FloatLayout:
+#
+    BoxLayout:
+        size_hint: .96, .08
+        pos_hint: {'center_x': .5, 'center_y': .3}
+        Slider:
+            id: progress
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            color: 196/255, 25/255, 138/255, 1
+            min: 0
+            max: 100
+            value: 0
+            background_width: '20dp'
+#            cursor_image: ''
+            cursor_size: '20dp', '20dp'
+            value_track_color: 1/255, 1, 1, 1
+            value_track: True
+
+
+
+    MDBoxLayout:
+        ControlIcon:
+            icon: 'restart'
+            on_press: sc.replay()
+        ControlIcon:
+            icon: 'skip-previous-outline'
+        ControlIcon:
+            icon: 'skip-backward-outline'
+        ControlIcon:
+            id: play_button
+            icon: 'play-outline'
+            on_press: sc.play(self)
+        ControlIcon:
+            icon: 'skip-forward'
+        ControlIcon:
+            icon: 'skip-next-outline'
+        ControlIcon:
+            icon: 'format-list-bulleted'
+
+
+<ControlIcon@MDIconButton>
+    color: .7, 0, 0, 1
+    size_hint: None, None
+    user_font_size: '30sp'
+    theme_text_color: 'Custom'
+    size: '20dp', '20dp'
+    text_color: 1, 1, 1, 1
+
+<RotateImage@FitImage>
+    angle: 0
+    canvas.before:
+        PushMatrix
+        Rotate:
+            angle: root.angle
+            origin: self.center
+    canvas.after:
+        PopMatrix
+

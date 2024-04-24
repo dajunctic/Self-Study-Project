@@ -1,0 +1,126 @@
+MDScreen:
+    name: 'profile'
+    MDFloatLayout:
+        md_bg_color: 246/255, 250/255, 1, 1
+        ProfileCard:
+            size_hint_y: .65
+            pos_hint: {'center_y': .7}
+            elevation: 6
+            md_bg_color: 1, 1, 1, 1
+            radius: [0, 0, 20, 20]
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint: {'center_y': 0.91}
+                user_font_size: "20sp"
+                theme_text_color: "Custom"
+                text_color: 71/255, 92/255, 119/255, 1
+                on_release:
+                    root.manager.transition.direction = 'right'
+                    root.manager.current = 'homepage'
+            MDIconButton:
+                icon: "chat"
+                pos_hint: {'center_x': .93, 'center_y': 0.9}
+                user_font_size: "30sp"
+                theme_text_color: "Custom"
+                text_color: 71/255, 92/255, 119/255, 1
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'conversation'
+            MDLabel:
+                text: "My Profile"
+                font_name: "fonts/Poppins-Bold"
+                font_size: "20sp"
+                pos_hint: {"center_x": .56, "center_y": .82}
+                color: rgba(71, 92, 119, 255)
+            MDFloatLayout:
+                size_hint_y: .2
+                pos_hint: {'center_y': .62}
+                Image:
+                    source: "assets/profile-pic.png"
+                    pos_hint: {'center_x': .5, "center_y": .5}
+            MDLabel:
+                text: "Yor Forger"
+                font_name: "fonts/Poppins-Bold"
+                pos_hint: {"center_y": .44}
+                halign: 'center'
+                color: rgba(71, 92, 119, 255)
+
+            MDLabel:
+                text: "Dazu Assassin School"
+                font_name: "fonts/Poppins-Medium"
+                pos_hint: {"center_y": .36}
+                halign: 'center'
+                font_size: "12sp"
+                color: rgba(188, 202, 228, 255)
+            MDLabel:
+                text: "Hanoi, Viet Nam"
+                font_name: "fonts/Poppins-Medium"
+                pos_hint: {"center_y": .32}
+                halign: 'center'
+                font_size: "12sp"
+                color: rgba(188, 202, 228, 255)
+            MDGridLayout:
+                rows: 2
+                cols: 3
+                size_hint: .85, .12
+                pos_hint: {'center_x': .5, 'center_y': .15}
+                MDLabel:
+                    text: "Photos"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Medium"
+                    font_size: "12sp"
+                    color: rgba(188, 202, 228, 255)
+                MDLabel:
+                    text: "Followers"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Medium"
+                    font_size: "12sp"
+                    color: rgba(188, 202, 228, 255)
+                MDLabel:
+                    text: "Follows"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Medium"
+                    font_size: "12sp"
+                    color: rgba(188, 202, 228, 255)
+
+                MDLabel:
+                    text: "89"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Bold"
+                    font_size: "14sp"
+                    color: rgba(71, 92, 119, 255)
+                MDLabel:
+                    text: "15M"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Bold"
+                    font_size: "14sp"
+                    color: rgba(71, 92, 119, 255)
+                MDLabel:
+                    text: "12"
+                    halign: "center"
+                    font_name: "fonts/Poppins-Bold"
+                    font_size: "14sp"
+                    color: rgba(71, 92, 119, 255)
+
+
+        SmartTile:
+            box_color: 1, 1, 1, 0
+            radius: [5, 5, 5, 5]
+            source: 'assets/1.png'
+            pos_hint: {'center_x': .29, 'center_y': .185}
+            size_hint: .34, .25
+
+        SmartTile:
+            box_color: 1, 1, 1, 0
+            radius: [5, 5, 5, 5]
+            source: 'assets/2.png'
+            pos_hint: {'center_x': .68, 'center_y': .25}
+            size_hint: .4, .12
+
+        SmartTile:
+            box_color: 1, 1, 1, 0
+            radius: [5, 5, 5, 5]
+            source: 'assets/3.png'
+            pos_hint: {'center_x': .68, 'center_y': .12}
+            size_hint: .4, .12
+

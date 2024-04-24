@@ -1,0 +1,51 @@
+#:kivy 1.0
+#:import menu menu
+
+MainWidget:
+
+<MainWidget>:
+    canvas.before:
+        # Color:
+        #     rgba: 0, 0, 0, 1
+        
+        Rectangle:
+            size: self.size
+            source: 'images/bg1.jpg'
+   
+
+    menu_widget: menu_widget
+    high_score_widget: high_score
+    touch_image: touch_image
+    touch_image1: touch_imageone
+
+    perspective_point_x: self.width / 2
+    perspective_point_y: self.height * 0.75
+
+    Image:
+        id: touch_image
+        opacity: 0
+        pos: root.width * 0.8, root.height * 0.3
+        size_hint: (0.1 , 0.1 * root.width / root.height)
+        source: 'images/touch.png'
+
+    Image:
+        id: touch_imageone
+        opacity: 0
+        pos: root.width * 0.1, root.height * 0.3
+        size_hint: (0.1 , 0.1 * root.width / root.height)
+        source: 'images/touch1.png'
+
+
+    Label:
+        id: score
+        text: root.score_txt
+        font_size: 30
+        font_name: 'fonts/Eurostile.ttf'
+        size_hint: .18, .18
+        pos_hint: {'x' : 0, 'top' :  1}
+    MenuWidget:
+        id: menu_widget
+    HighScore:
+        id: high_score
+
+       

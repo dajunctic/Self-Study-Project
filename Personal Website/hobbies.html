@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type="image/gif/png" href="Akali.jpg">
+		<title> Professor Dajunctic</title>
+		<style>
+			body {
+				background-image: url("trang-va-sao.jpg");
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-attachment : fixed;
+			}
+			ul.home {
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				overflow: hidden;
+				background-color:#4CAF50;
+				font-family:Gabriola;
+			}
+			li.home{
+				float:left;
+			}
+			dt.home {
+				float:left;
+			}
+			li a.menu{
+				display:block;
+				color:white;
+				text-align:center;
+				padding:16px;
+				text-decoration: none;
+				font-size:175%;
+				height:40px;
+			}
+			li a.asMenu{
+				display:block;
+				color:black;
+				text-align:center;
+				padding:15px;
+				text-decoration: none;
+				font-size:16px;
+			}
+			li a.menu:hover {
+				background-color:#46a049;
+			}
+			li a.asMenu:hover {
+				background-color:gray;
+			}
+			.form {
+				border: 1px solid black;
+				font-size: 35px;
+			}
+			.frames {
+				display : block;
+				border: none;
+			}
+			.posterMovie {
+				width: 194px;
+				height: 270px;
+			}
+			.type1Button {
+				font-size: 25px;
+				text-align:center;
+				cursor: pointer;
+				outline: none;
+				color: #fff;
+				background-color: lightblue;
+				border:none;
+				border-radius:10px;
+			}
+			.type1Button:hover {
+				background-color: #3e8e41;
+			}
+			.listTypeMovie {
+				display:none;
+				background-color: white;
+				border: none;		
+			}
+		</style>
+		<script>
+			var isMovie = 1, isMusic = 1;
+			function countClicks(idd) {
+				if(idd == 0) isMovie = (isMovie + 1) % 2;
+				if(idd == 1) isMusic = (isMusic + 1) % 2;
+				
+			}
+		</script>
+	</head>
+	<body>
+		<img src="Dajunctic_BrandName.jpg" alt="Dajunctic" style="width:100%">
+		<ul class="home">
+			<li class="home"> <a href="index.html" class="menu"><b> Home </b></a> </li>
+			<li class="home"> <a href="profile.html" class="menu"><b> Profile </b></a> </li>
+			<li class="home"> <a href="introduce.html" class="menu"> <b>Introduce</b></a> <li>
+			<li class="home"> <a href="news.html" class="menu"><b> News </b></a> <li>
+			<li class="home"> <a href="idea.html" class="menu"><b> Idea</b></a> <li>
+			<li class="home"> <a href="achievement.html" class="menu"><b> Achievement</b></a> <li>
+			<li class="home"> <a href="hobbies.html" class="menu" style="background-color:#46a049"><b> Hobbies</b></a> <li>
+			<li class="home"> <a href="myGame.html" class="menu"><b> Game </b></a> <li>
+		</ul>
+		<ul style="list-style-type:none"> 
+			<li> 
+				<h1>
+					<button onclick="countClicks(0);displayTheme();idTypeListMoviee()"> <img src="movie.png" alt="movie" style="width:23px"> </button>		
+					Movie
+					<div class="frames">
+						<dl style="list-style-type:none;overflow:hidden">
+							<dt class="home"> <button onclick="displayPosterMovie(0)" class="type1Button" style="color:red;width:200px;height:40px"> Cinema Movie</button> </dt>
+							<dt class="home"> <button onclick="displayPosterMovie(1)" class="type1Button" style="color:red;width:200px;height:40px"> Anime </button> </dt>							
+						</dl>
+						<div class="listTypeMovie" style="display:block">
+						<!-- 194 * 259 with every poster -->
+							<img src="ninjaturtles.jpg" alt="Ninja Turtles" class="posterMovie">
+							<img src="mrbeanholiday.jpg" alt="Mr Bean Holiday" class="posterMovie">
+							<img src="johnnyenglish3.jpg" alt="Johnny English 3" class="posterMovie">
+							<img src="joker.jpg" alt="Joker" class="posterMovie">
+							<img src="endgame.jpg" alt="End game" class="posterMovie">
+						</div>
+						<div class="listTypeMovie">
+							<img src="gintama.jpg" alt="Gintama" class="posterMovie">
+							<img src="Re_zero.jpg" alt="Re:Zero" class="posterMovie">
+							<img src="Dragon_Ball_Super.jpg" alt="Dragon Ball Super" class="posterMovie">
+							<img src="demonslayer.jpg" alt="Kimetsu no Yaiba" class="posterMovie">
+						</div>
+					</div>
+				</h1>
+			</li>
+			<li> 
+				<h1>
+					<button onclick="countClicks(1);displayTheme();"> <img src="music.png" alt="music" style="width:23px"> </button>
+					Music 
+					<div class="frames">
+						<div>
+						<h1 style="color:orange"> Awaken </h1>
+						<div style="font-size:15px;float:left;background-color:#33adff;width:500px;font-family:Vivaldi">
+							The night beckons while you dream <br/>
+							A life never lives in peace  <br/>
+							As you stand upon the edge <br/>
+							Woven by a single thread <br/>
+							And fate may fall down upon you <br/>
+							While the devil is knocking <br/>
+							Right at your door <br/>
+							So all you restless <br/>
+							Each night you hear the drums of war <br/>
+							Awaken, awaken <br/>
+							The voice begins to call you while you hunger <br/>
+							A taste of destiny you're searching for <br/>
+							Awaken, awaken <br/>
+							The fight is at your door, take up the cause <br/>
+							Awaken, awaken, awaken <br/> 
+							Awaken, awaken, awaken, awaken <br/>
+							As you stand upon the edge <br/>
+							Hanging in the balance (Oh) <br/>
+							And fate may fall down upon you <br/>
+							While the devil is knocking <br/>
+							So all you restless <br/>
+							Each night you hear the drums of war <br/>
+							(Hear the drums of war) <br/>
+							Awaken, awaken <br/>
+							The voice begins to call you while you hunger <br/>
+							(While you hunger) <br/>
+							A taste of destiny you're searching for <br/>
+							Awaken, awaken, awaken <br/>
+						</div >
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/AeObjlI44Ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float:right"></iframe>
+						</div>
+						<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+						<div>
+						<h1 style="color:orange"> Legends never die </h1>
+						<div style="font-size:15px;float:left;background-color:#33adff;width:500px;font-family:Vivaldi">
+							Legends never die<br/>
+							When the world is calling you<br/>
+							Can you hear them screaming out your name?<br/>
+							Legends never die<br/>
+							They become a part of you<br/>
+							Every time you bleed for reaching greatness<br/>
+							Relentless you survive<br/>
+							They never lose hope when everything's cold<br/>
+							And the fighting's near<br/>
+							It's deep in their bones, they'll run into smoke<br/>
+							When the fire is fierce<br/>
+							[ Oh, pick yourself up, 'cause<br/>
+							Legends never die<br/>
+							When the world is calling you (the world is calling you)<br/>
+							Can you hear them screaming out your name?<br/>
+							Legends never die<br/>
+							They become a part of you (they become a part of you)<br/>
+							Every time you bleed for reaching greatness<br/>
+							Legends never die ] (repeat the second after ending lyric song once)<br/>
+							They're written down in eternity<br/>
+							But you'll never see the price it costs<br/>
+							Scars collected all their lives<br/>
+							When everything's lost, they pick up their hearts<br/>
+							And avenge defeat<br/>
+							Before it all starts, they suffer through harm<br/>
+							Just to touch a dream<br/>
+						</div>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/8bVWaQ5O5yU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float:right"></iframe>
+						</div>
+					</div>
+				</h1>
+			</li>
+			<script>
+				function displayTheme() {
+					var typeHobby = document.getElementsByClassName("frames");
+					if(isMovie == 0 ) typeHobby[0].style.display = "none";
+					else typeHobby[0].style.display = "block";
+					if(isMusic == 0 ) typeHobby[1].style.display = "none";
+					else typeHobby[1].style.display = "block";
+				}
+				function idTypeListMoviee() {
+					var moMovie = document.getElementsByClassName("listTypeMovie");
+					moMovie[0].style.display = "block";
+					var bbuu = document.getElementsByClassName("type1Button");
+					for(let i = 1; i < moMovie.length ; i++) {
+						moMovie[i].style.display = "none";
+					}	
+				}
+				function displayPosterMovie(idTypeListMovie) {
+					var moMovie = document.getElementsByClassName("listTypeMovie");
+					moMovie[idTypeListMovie].style.display = "block";
+					for(let i = 0; i < moMovie.length ; i++) {
+						if(i!=idTypeListMovie) moMovie[i].style.display = "none";
+					}					
+				}
+			</script>
+		</ul>
+	</body>
+</html>

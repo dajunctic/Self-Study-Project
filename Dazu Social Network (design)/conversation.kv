@@ -1,0 +1,197 @@
+MDScreen:
+    name: 'conversation'
+    MDFloatLayout:
+        md_bg_color: 3/255, 28/255, 47/255, 1
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {'center_y': 0.95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: 1/255, 255/255, 255/255, 1
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'profile'
+        MDIconButton:
+            icon: "dots-vertical"
+            pos_hint: {'center_x': .93, 'center_y': 0.95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: 1/255, 255/255, 255/255, 1
+
+        MDLabel:
+            text: "Chat with friends"
+            font_name: "fonts/Poppins-Bold"
+            font_size: "20sp"
+            pos_hint: {"center_x": .56, "center_y": .89}
+            color: 196/255, 25/255, 138/255, 1
+        SearchBar:
+            size_hint: .85, .08
+            pos_hint: {'center_x': .5, 'center_y': .78}
+            elevation: 10
+            md_bg_color: 91/255, 132/255, 177/255, 1
+            radius: [15]
+            Image:
+                source: "assets/search.png"
+                pos_hint: {'center_x': .1, 'center_y': .48}
+                size_hint_y: .5
+            TextInput:
+                hint_text: 'Search friend'
+                size_hint: .78, None
+                pos_hint: {'center_x': .58, 'center_y': .5}
+                height: self.minimum_height
+                cursor_color: 1, 1, 1, 1
+                cursor_width: "2sp"
+                multiline: False
+                background_color: 0, 0, 0, 0
+                padding: 15
+                font_name: "fonts/Poppins-Medium"
+                font_size: '14sp'
+                hint_text_color: 3/255, 28/255, 47/255, 1
+                foreground_color: 1, 1, 1, 1
+        ScrollView:
+            do_scroll_y: True
+            do_scroll_x: False
+            size_hint_y: .72
+            pos_hint: {'center_x': .52, 'y': 0}
+            bar_width: 0
+            GridLayout:
+                size_hint_y: None
+                row_default_height: 60
+                height: self.minimum_height
+                cols: 1
+                spacing: 15, 10
+                padding: 15, 10
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s1.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Nguyễn Ngọc Phương Anh"
+                        font_size: '14sp'
+                        font_name: 'fonts/VN-Poppins-ExtraBold'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 173/255, 239/255, 209/255, 1
+                    MDLabel:
+                        text: "Anh iu đang h làm zì zậy ta..."
+                        font_size: '13sp'
+                        font_name: 'fonts/VN-Poppins-Regular'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 1, 51/255, 0, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s2.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Đặng Thu Trà"
+                        font_size: '14sp'
+                        font_name: 'fonts/VN-Poppins-ExtraBold'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 173/255, 239/255, 209/255, 1
+                    MDLabel:
+                        text: "Mai vẫn chỗ cũ nhé anh hihi.."
+                        font_size: '13sp'
+                        font_name: 'fonts/VN-Poppins-Regular'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 1, 51/255, 0, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s3.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Nguyễn Thị Diệu Linh"
+                        font_size: '14sp'
+                        font_name: 'fonts/VN-Poppins-ExtraBold'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 173/255, 239/255, 209/255, 1
+                    MDLabel:
+                        text: "Anh chả iu em nữa rồi hiu hiu ..."
+                        font_size: '13sp'
+                        font_name: 'fonts/VN-Poppins-Regular'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 1, 51/255, 0, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s5.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Lê Thị Khánh Huyền"
+                        font_size: '14sp'
+                        font_name: 'fonts/VN-Poppins-ExtraBold'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 173/255, 239/255, 209/255, 1
+                    MDLabel:
+                        text: "Hay là tối nay chúng mình ..."
+                        font_size: '13sp'
+                        font_name: 'fonts/VN-Poppins-Regular'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 1, 51/255, 0, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s7.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Chị gái mưa"
+                        font_size: '14sp'
+                        font_name: 'fonts/VN-Poppins-ExtraBold'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 173/255, 239/255, 209/255, 1
+                    MDLabel:
+                        text: "Bé yêu của chị đâu rồi ta?"
+                        font_size: '13sp'
+                        font_name: 'fonts/VN-Poppins-Regular'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 1, 51/255, 0, 1
+
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s6.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Nguyễn Linh Chi"
+                        font_size: '14sp'
+                        font_name: 'fonts/VN-Poppins-ExtraBold'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 173/255, 239/255, 209/255, 1
+                    MDLabel:
+                        text: "Đồ chó mất nết, đúng bọn UET tệ"
+                        font_size: '13sp'
+                        font_name: 'fonts/VN-Poppins-Regular'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 91/255, 132/255, 177/255, 1
+
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s8.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Người yêu cũ"
+                        font_size: '14sp'
+                        font_name: 'fonts/VN-Poppins-ExtraBold'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 173/255, 239/255, 209/255, 1
+                    MDLabel:
+                        text: "Khốn nạn! Sao tôi lại quên biết..."
+                        font_size: '13sp'
+                        font_name: 'fonts/VN-Poppins-Regular'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 91/255, 132/255, 177/255, 1
+                MDFloatLayout:
+                    Image:
+                        source: 'assets/s4.png'
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                    MDLabel:
+                        text: "Bồ cũ"
+                        font_size: '14sp'
+                        font_name: 'fonts/VN-Poppins-ExtraBold'
+                        pos_hint: {'center_x': .72, 'center_y': .6}
+                        color: 173/255, 239/255, 209/255, 1
+                    MDLabel:
+                        text: "Chúng ta chia tay đi..."
+                        font_size: '13sp'
+                        font_name: 'fonts/VN-Poppins-Regular'
+                        pos_hint: {'center_x': .72, 'center_y': .32}
+                        color: 91/255, 132/255, 177/255, 1
+        Image:
+            source: 'assets/new.png'
+            size_hint: .14, .14
+            pos_hint: {'center_x': .88, 'center_y': .08}
